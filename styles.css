@@ -1,10 +1,15 @@
 body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
     display:grid;
     margin:0;
     padding:0;
     min-height: 100vh;
     grid-template: 100px 1fr / 300px 1fr;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -26,7 +31,6 @@ body {
     width:100%;
     height: 20px;
     background: linear-gradient(to bottom, rgb(202, 202, 202), transparent);
-    z-index: -1;
     
 }
 
@@ -42,12 +46,12 @@ ul {
 }
 
 .library {
-    z-index: -2;
     padding: 20px;
     background-color: rgb(247, 247, 247);
     display:grid;
-    gap: 15px;
+    gap: 25px;
     grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+    grid-auto-rows: 270px;
 }
 
 .card {
@@ -61,8 +65,57 @@ ul {
     display: grid;
     font-size: 18px;
 }
+button.new {
+    border: 2px dashed black;
+    box-shadow: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    width: 90px;
+    height: 120px;
+    padding: 0;
+}
+
 .title {
     justify-self: center;
     font-size: 24px;
     font-weight: 600;
+}
+
+form {
+    position:absolute;
+    top: calc(50vh - (700px / 2));
+    left: calc(50vw - (600px / 2));
+    height: 700px;
+    width: 600px;
+    box-shadow: 0 0 50px;
+    background-color: white;
+    border-radius: 100px;
+    padding: 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+    display:none;
+}
+
+.bookForm .close {
+    flex: 0 0 auto;
+    width:fit-content;
+    align-self: flex-end;
+    border: none;
+    background-color: #0000;
+    font-size: 18px;
+    cursor:pointer;
+}
+
+button#toggleRead, button#removeBook {
+    width: 20px;
+    height: 20px;
+}
+
+#toggleRead {
+    background-color: green;
+}
+
+#removeBook {
+    background-color: red;
 }
