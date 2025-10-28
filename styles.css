@@ -39,6 +39,7 @@ ul {
     padding: 0;
     display:flex;
     gap: 50px;
+    list-style-type: none;
 }
 
 .sidebar {
