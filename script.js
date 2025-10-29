@@ -49,13 +49,16 @@ function createCard(book) {
     buttons.classList.add("buttons")
 
     const readButton = document.createElement("button")
+    readButton.textContent = "Mark Read"
     readButton.setAttribute("id", "toggleRead")
     readButton.addEventListener("click", () => {
+        readButton.textContent = `Mark ${book.status}`
         book.toggleRead()
         status.textContent = book.status;
     })
 
     const removeBook = document.createElement("button")
+    removeBook.textContent = "Remove"
     removeBook.setAttribute("id", "removeBook")
     removeBook.addEventListener("click", () => {
         library.removeChild(card);

@@ -96,6 +96,26 @@ form {
     box-sizing: border-box;
     flex-direction: column;
     display:none;
+    font-size: 3rem;
+    justify-content: space-between;
+    input {
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background-color:aliceblue;
+        padding: 0 10px;
+        font-size: 1.5rem;
+    }
+    .addButton {
+        font-size: 24px;
+        align-self: center;
+    }
+}
+
+.buttons {
+    align-self: flex-end;
+    display:flex;
+    justify-content: space-between;
 }
 
 .bookForm .close {
@@ -109,8 +129,11 @@ form {
 }
 
 button#toggleRead, button#removeBook {
-    width: 20px;
-    height: 20px;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
 }
 
 #toggleRead {
@@ -119,4 +142,5 @@ button#toggleRead, button#removeBook {
 
 #removeBook {
     background-color: red;
+    content: "Remove"
 }
